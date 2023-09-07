@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Door</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        img{
+            width: 400px;
+            height: 500px;
+        }
+        .blue { 
+            position: fixed;
+            margin-right: 500px;
+            margin-top: 130px;
+            padding: 30px;
+            background-color: rgb(4, 48, 168);
+            color: white;
+            border-radius: 20px;
+            border: none;
+        }
+        .reds {
+            position: fixed;
+            margin-left: 500px;
+            margin-top: 130px;
+            padding: 30px;
+            background-color: rgb(168, 4, 4);
+            color: white;
+            border-radius: 20px;
+            border: none;
+        }
+        h1 {
+            position: fixed;
+            color: beige;
+            margin-top: 170px;
+        }
+        #Crush {
+            margin-right: 178px;
+        }
+        #Goal {
+            margin-left: 178px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Meme.png" alt="" id="images">
+        <h1 id="Crush">Crush</h1>
+        <h1 id="Goal">Goal</h1>
+        <audio src="Blue.mp3" id="blueMusic"></audio>
+        <audio src="Red.mp3" id="redMusic"></audio>
+        <button onclick="blueButton()" class="blue">Blue</button>
+        <button onclick="redButton()" class="reds">Red</button>
+    </div>
+
+    <script>
+        alert ("Choose what is important to you right now!")
+        function blueButton() {
+            document.getElementById("images").src = "Nooo.png"
+            document.getElementById("blueMusic").play();
+            document.getElementById("redMusic").pause();
+        }
+        function redButton() {
+            document.getElementById("images").src = "Ayiee.png"
+            document.getElementById("redMusic").play();
+            document.getElementById("blueMusic").pause();
+        }
+    </script>
+</body>
+</html>
